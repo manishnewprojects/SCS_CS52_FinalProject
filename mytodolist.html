@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<title>Manish's Handy Dandy ToDo list manager</title>
+ 
+<!-- CSS Files -->
+<link rel="stylesheet" type="text/css" href="todo_list.css">
+
+
+ </head>
+
+<body>
+
+<h2>
+	Manish's handy dandy todolist
+</h2>
+
+<div class="todo_list" id="todoListMaster" style="color: green">
+	<ul> 
+	</ul>
+</div>
+
+<div id="notepad" >
+	<br>
+     Add ToDo item: 
+    <input type="text" id="input_id" >
+    <input type="button" id="todobutton" value="Add" onclick="list_model.addtoMasterList()" />
+    
+ 
+</div>
+ 
+
+<script src="todo_list.js">
+</script>
+</body>
+</html>
