@@ -72,12 +72,16 @@ function init() {
 	 
 list_model.displayMasterList();
 
-	var input = document.getElementById("input_id");
-	input.addEventListener("keyup", function(event) {
+var input = document.getElementById("input_id");
+
+input.addEventListener("keyup", function(event) {
+	
 	  if (event.keyCode === 13) {
+
 	   event.preventDefault();
 	   document.getElementById("todobutton").click();
 	  }
+
 	});
 	 
 }
