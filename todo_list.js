@@ -1,7 +1,4 @@
 
-
-
-
 var list_model = {
 
 

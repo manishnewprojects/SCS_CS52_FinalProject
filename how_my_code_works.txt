@@ -1,0 +1,53 @@
+How does my code work?
+Manish Vaidya
+Submitted for final project for Stanford Continuing Studies CS52 course
+
+---- DESCRIPTION -------------
+
+(* In order of appearance in the code *)
+
+mytodolist.html
+================
+
+Line #21 - DIV in HTML with id of todoListMaster which will hold the list. I assigned a class of todo_list to this DIV to allow control of the display via CSS
+
+Line #23 - Start of DIV with ID of Notepad which is used to get user input of the items
+
+Line #26 - Input field of type text with id of input_id
+
+Line #27 - Button to be clicked to indicate item has been entered. Upon clicking the button this invokes the Javascript method addtoMasterList from the Object list_model
+
+Line #31 - Button to clear the list and start over again. Upon clicking the button this invokes the JavaScript method clearList
+
+Line #34 - HTML to include the Javascript file todo_list.js
+
+todo_list.js
+============
+
+Line #2 - Declaration for object list_model which will hold all variables & methods to operate on the list
+
+method displayMasterList() - This method is designed to be invoked at the beginning of the page load. It first reads an item called itemsinlist from local store (#7). If a stored list if found, the contents of the list get assigned to the innerHTML of the list element (#11). If no stored list items are found, the innerHTML of the list is set to a blank string (#16)
+
+
+method addtoMasterList() - this is really the heart of the application. It starts out by assigning value entered by the user to the variable userInput. Next listItemnumber which is a global variable is incremented by 1 (#25). Then I set the input string to empty (#27). Line #29 uses the listItemnumber variable to create a unique checkbox for each of the items. It then assigns an onclick method "crossout" to call if the box gets checked. Then a unique label id is created for each item and final the item itself. The HTML tag <label> is used merely to indicate a "container" for the HTML that gets assigned to the innerHTML of todolistMaster. Lines #31 & #32 store the item list along with the number of items in the local storage
+
+Method crossout() - This is used to crosscut an item if the checkbox next to it gets clicked. The method is called as an onclick invocation as defined in the method addtoMasterList (see above)
+
+Method clearList() - this is used to clear out local storage and reset the count to zero
+
+Line #62 calls the function init upon window.onload. I took this from the battleship application in the book
+
+Line #64 - setups up a global variable for the number of entries in the list
+
+Function init() - Starts by calling the displayMasterList method for the list_model object. As noted above this will show the list if there is one stored in localStorage. Line #72 sets up a variable input which gets assigned contents of the element input_id. Lines 74-82 are used to trigger a input event for a enter keystroke which is same as clicking the button to enter the list item
+
+
+todo_list.css
+=============
+
+This is a CSS file to provide appearance control for the list
+
+Line #1 give the body of the page a lightgrey color
+
+Lines #6-15 setup properties for the list itself. This includes a yellowish color for the list (post it like feel) and proper padding to keep the list looking like a notepad
+

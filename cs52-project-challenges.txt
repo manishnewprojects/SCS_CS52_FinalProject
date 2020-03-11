@@ -1,0 +1,33 @@
+
+ToDo list Project background 
+
+Manish Vaidya
+Submitted for final project for Stanford Continuing Studies CS52 course
+
+URL's for code/references used 
+==============================
+
+Most of these were results of Google searches on issues that I needed help with
+
+- https://stackoverflow.com/questions/48070987/how-to-get-user-input-from-javascript-form
+
+- https://stackoverflow.com/questions/6628707/how-to-merge-html-input-box-and-a-button-sample-images-attached
+
+- https://www.w3schools.com/tags/tag_input.asp
+
+- https://stackoverflow.com/questions/15305527/javascript-user-input-through-html-input-tag-to-set-a-javascript-variable
+
+- https://www.w3schools.com/howto/howto_js_display_checkbox_text.asp
+
+- https://stackoverflow.com/questions/42981214/javascript-checkbox-line-through 
+
+Challenges/Problems
+====================
+
+1) I started out by using the code from the battleship example in the book. The first attempt at getting user input ended up as a pop-up box. This is not how I wanted the user to be able to enter their text. I love the Google Keep app and wanted my app to work just like that. I had to figure out how to get a HTML input box by using a constructor like  var name = window.prompt("prompt: ");
+
+
+2) Second challenge was on how to create a list? My program kept overwriting the list items. Then I realized I had to create an individual HTML line for each entry and then make sure that that line was added to the HTML thus far. If I just attend the last entry to the HTML DIV, it would show only one entry
+
+3) Another interesting challenge was on how to get input on enter key (same as if the button had been clicked). I found the answer on a code snippet on stackoverflow.com 
+
